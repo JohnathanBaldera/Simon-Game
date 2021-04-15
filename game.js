@@ -63,6 +63,10 @@ function checkAnswer(currentLevel) {
         setTimeout(function() {
             $("body").removeClass("game-over")
         }, 200)
+
+        $("#level-title").text("Game Over, Press any key to restart")
+
+        startOver()
     }
 
     if (userClickedPattern.length == gamePattern.length) {
@@ -71,7 +75,5 @@ function checkAnswer(currentLevel) {
         }, 1000)
     }
 
-    $("#level-title").text("Game Over, Press any key to restart")
 
-    startOver()
 }
